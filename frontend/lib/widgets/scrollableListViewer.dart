@@ -1,40 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:frontend/inherited/User.dart';
-import 'package:frontend/middleware/mangaware.dart';
-import 'package:frontend/middleware/userware.dart';
-import 'package:frontend/screens/manga/mangaLayout.dart';
 import 'package:frontend/shared/bottomBar.dart';
 import 'package:frontend/shared/listWrapper.dart';
 import 'package:frontend/shared/loading/loadingPage.dart';
 
-// TODO detach from manga
+// TODO detach from object
 // wraps a list of objects allowing the user to easily navigate between said objects
-class MangaViewer extends StatefulWidget {
-  List _mangaSelected;
+class ScrollableListViewer extends StatefulWidget {
+  List objectsSelected;
+  String title;
+  Function child;
 
-  MangaViewer(mangaSelected) {
-    _mangaSelected = mangaSelected;
+  ScrollableListViewer(_objectsSelected, _title, _child) {
+    objectsSelected = _objectsSelected;
+    title = _title;
+    child = _child;
   }
   @override
-  _MangaViewerState createState() => new _MangaViewerState();
+  _ScrollableListViewerState createState() => new _ScrollableListViewerState();
 }
 
-class _MangaViewerState extends State<MangaViewer> {
+class _ScrollableListViewerState extends State<ScrollableListViewer> {
   bool loading = true;
   int _cutIndex = 0;
   ScrollController _scrollController = new ScrollController();
-  List userManga; //TODO update underscores
-  List _mangaCut = [];
+  List userobject; //TODO update underscores
+  List _objectsCut = [];
 
-  MangaLayout createChild(manga) {
-    bool favorited = false;
-    if (userManga.contains(manga['title'])) favorited = true;
+  Widget createChild(object) {
     //TODO add onClick
-    return MangaLayout(manga, favorited);
+    return widget.child(object);
   }
 
-  main() async {
+  main() {
     setState(() {
       loading = true;
     });
@@ -43,25 +41,20 @@ class _MangaViewerState extends State<MangaViewer> {
     if (_scrollController.hasClients)
       currentPos = _scrollController.position.maxScrollExtent;
 
-    List mangaSelected = widget
-        ._mangaSelected; // segmenting current manga to limit database calls
-    List mangaCut = _mangaCut;
+    List objectsSelected = widget
+        .objectsSelected; // segmenting current object to limit database calls
+    List objectsCut = _objectsCut;
     for (int i = _cutIndex;
         i <
-            (_cutIndex + 5 > mangaSelected.length
-                ? mangaSelected.length
+            (_cutIndex + 5 > objectsSelected.length
+                ? objectsSelected.length
                 : _cutIndex + 5);
         i++) {
-      mangaCut.add(mangaSelected[i]);
-      mangaCut[i]["cover"] = await Mangaware().getCover(
-          UserInheritedWidget.of(context).user['jwt'], mangaCut[i]["id"]);
+      objectsCut.add(objectsSelected[i]);
     }
     _cutIndex += 5;
 
-    dynamic _userManga = (await Userware()
-        .getManga(UserInheritedWidget.of(context).user['jwt']))['manga'];
     setState(() {
-      userManga = _userManga;
       loading = false;
     });
     if (currentPos != null)
@@ -70,7 +63,7 @@ class _MangaViewerState extends State<MangaViewer> {
 
   @override
   Widget build(BuildContext context) {
-    if (_mangaCut.length == 0 && widget._mangaSelected.length != 0) {
+    if (_objectsCut.length == 0 && widget.objectsSelected.length != 0) {
       _cutIndex = 0;
       main();
     }
@@ -78,7 +71,7 @@ class _MangaViewerState extends State<MangaViewer> {
     return Scaffold(
       backgroundColor: Colors.orange[100],
       appBar: AppBar(
-        title: const Text('Manga List'),
+        title: Text(widget.title), // TODO pass in title
         actions: <Widget>[
           IconButton(
               icon: new Icon(Icons.arrow_circle_up),
@@ -104,9 +97,10 @@ class _MangaViewerState extends State<MangaViewer> {
           controller: _scrollController,
           padding: EdgeInsets.symmetric(vertical: 100.0),
           child: Column(children: [
-            Wrap(children: listWrapper(_mangaCut, createChild).cast<Widget>()),
+            Wrap(
+                children: listWrapper(_objectsCut, createChild).cast<Widget>()),
             SizedBox(height: 20.0),
-            if (_mangaCut.length != widget._mangaSelected.length)
+            if (_objectsCut.length != widget.objectsSelected.length)
               TextButton(onPressed: main, child: Text("Show more"))
           ])),
       bottomNavigationBar: bottomBar(context),

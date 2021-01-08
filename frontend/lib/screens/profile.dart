@@ -3,12 +3,13 @@ import 'package:flutter/widgets.dart';
 import 'package:frontend/inherited/User.dart';
 import 'package:frontend/middleware/mangaware.dart';
 import 'package:frontend/middleware/userware.dart';
-import 'package:frontend/screens/manga/mangaViewer.dart';
+import 'package:frontend/screens/manga/mangaLayout.dart';
 import 'package:frontend/screens/manga/mangaWrapper.dart';
 import 'package:frontend/shared/bottomBar.dart';
 import 'package:frontend/shared/functions.dart';
 import 'package:frontend/shared/listWrapper.dart';
 import 'package:frontend/shared/loading/loadingPage.dart';
+import 'package:frontend/widgets/scrollableListViewer.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -50,7 +51,8 @@ class _ProfileState extends State<Profile> {
       return TextButton(
           onPressed: () {
             setState(() {
-              nextChild = MangaViewer([manga]);
+              nextChild = ScrollableListViewer(
+                  [manga], "User's Manga", (manga) => MangaLayout(manga));
             });
           },
           child: Text(manga['title']));

@@ -3,8 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:frontend/inherited/User.dart';
 import 'package:frontend/middleware/mangaware.dart';
 import 'package:frontend/middleware/userware.dart';
-import 'package:frontend/screens/manga/mangaViewer.dart';
+import 'package:frontend/screens/manga/mangaLayout.dart';
 import 'package:frontend/shared/loading/loadingPage.dart';
+import 'package:frontend/widgets/scrollableListViewer.dart';
 
 //TODO need to be able to remove from recommended
 
@@ -43,6 +44,7 @@ class _RecommendState extends State<Recommend> {
       return Loading();
     }
     if (nextChild != null) return nextChild;
-    return MangaViewer(suggestedManga);
+    return ScrollableListViewer(
+        suggestedManga, "Suggested Manga", (manga) => MangaLayout(manga));
   }
 }
