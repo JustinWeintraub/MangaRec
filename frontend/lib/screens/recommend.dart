@@ -4,7 +4,7 @@ import 'package:frontend/inherited/User.dart';
 import 'package:frontend/middleware/mangaware.dart';
 import 'package:frontend/middleware/userware.dart';
 import 'package:frontend/screens/manga/mangaViewer.dart';
-import 'package:frontend/shared/loading.dart';
+import 'package:frontend/shared/loading/loadingPage.dart';
 
 //TODO need to be able to remove from recommended
 

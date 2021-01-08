@@ -3,7 +3,7 @@ import 'package:frontend/inherited/User.dart';
 import 'package:frontend/middleware/mangaware.dart';
 import 'package:frontend/screens/manga/mangaViewer.dart';
 import 'package:frontend/screens/manga/search/search.dart';
-import 'package:frontend/shared/loading.dart';
+import 'package:frontend/shared/loading/loadingPage.dart';
 import 'package:frontend/shared/contexedRoute.dart';
 
 // USAGE: wraps the search functionality, getting all the manga initially to be searched from

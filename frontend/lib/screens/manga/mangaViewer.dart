@@ -6,7 +6,7 @@ import 'package:frontend/middleware/userware.dart';
 import 'package:frontend/screens/manga/mangaLayout.dart';
 import 'package:frontend/shared/bottomBar.dart';
 import 'package:frontend/shared/listWrapper.dart';
-import 'package:frontend/shared/loading.dart';
+import 'package:frontend/shared/loading/loadingPage.dart';
 
 // TODO detach from manga
 // wraps a list of objects allowing the user to easily navigate between said objects

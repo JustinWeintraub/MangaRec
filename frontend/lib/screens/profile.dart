@@ -8,7 +8,7 @@ import 'package:frontend/screens/manga/mangaWrapper.dart';
 import 'package:frontend/shared/bottomBar.dart';
 import 'package:frontend/shared/functions.dart';
 import 'package:frontend/shared/listWrapper.dart';
-import 'package:frontend/shared/loading.dart';
+import 'package:frontend/shared/loading/loadingPage.dart';
 
 class Profile extends StatefulWidget {
   @override
