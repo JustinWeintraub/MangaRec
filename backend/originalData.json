@@ -1,0 +1,1986 @@
+[
+  {
+    "id": "1",
+    "title": "Tower of God",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "39",
+    "title": "One Piece",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "153",
+    "title": "Detective Conan",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "276",
+    "title": "Karate Shoukoushi Kohinata Minoru",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "303",
+    "title": "Claymore",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "311",
+    "title": "Yotsuba to!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "528",
+    "title": "3-gatsu no Lion",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "635",
+    "title": "Toaru Majutsu no Index",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "661",
+    "title": "Toaru Kagaku no Railgun",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "666",
+    "title": "Giant Killing",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "820",
+    "title": "Zettai Karen Children",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "1063",
+    "title": "Chihayafuru",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "1873",
+    "title": "Haikyuu!!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "1880",
+    "title": "Gekkan Shoujo Nozaki-kun",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "1912",
+    "title": "Saint☆Onii-san",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "1958",
+    "title": "Hajime no Ippo",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "2712",
+    "title": "Blame!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "2890",
+    "title": "Alice in Borderland",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "3056",
+    "title": "Tokyo Ghoul",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "3409",
+    "title": "Otoyomegatari",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "3804",
+    "title": "Pok&eacute;mon Special",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "3996",
+    "title": "Akatsuki no Yona",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "4993",
+    "title": "Spirit Circle",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "6770",
+    "title": "Horimiya",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "7195",
+    "title": "Nanatsu no Taizai",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "7950",
+    "title": "Hinamatsuri",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "8245",
+    "title": "World Trigger",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "9123",
+    "title": "One Punch Man (Webcomic/Original)",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "9554",
+    "title": "Gakkou Gurashi!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "9679",
+    "title": "Birdmen",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "9707",
+    "title": "Kono Oto Tomare!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "10004",
+    "title": "One Piece - Digital Colored Comics",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "10197",
+    "title": "Mahouka Koukou no Rettousei - Kyuukousen-hen",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "10271",
+    "title": "Ballroom e Youkoso",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "10749",
+    "title": "Houseki no Kuni",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "11710",
+    "title": "Days",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "11731",
+    "title": "Namaikizakari",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "11881",
+    "title": "Dead Dead Demon's Dededede Destruction",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "12088",
+    "title": "Yugami-kun ni wa Tomodachi ga Inai",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "12108",
+    "title": "Mushoku Tensei ~Isekai Ittara Honki Dasu~",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "12325",
+    "title": "World Customize Creator",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "12453",
+    "title": "Toaru Ossan no VRMMO Katsudouki",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "12672",
+    "title": "Tate no Yuusha no Nariagari",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "12714",
+    "title": "Boku no Hero Academia",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "13108",
+    "title": "Karakai Jouzu no Takagi-san",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "13364",
+    "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Daiisshou - Outo no Ichinichi Hen",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "13800",
+    "title": "The New Gate",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "13871",
+    "title": "Dungeon Meshi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "14153",
+    "title": "Konjiki no Word Master - Yuusha Yonin ni Makikomareta Unique Cheat",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "14377",
+    "title": "ReLIFE",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "14850",
+    "title": "Death March kara Hajimaru Isekai Kyousoukyoku",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "15016",
+    "title": "Black Clover",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "15359",
+    "title": "Isekai Tensei Soudouki",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "15374",
+    "title": "Re:Zero Kara Hajimeru Isekai Seikatsu - Dainishou - Yashiki no Shuukan Hen",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "15553",
+    "title": "Tensei Shitara Slime Datta Ken",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "15722",
+    "title": "Tomo-chan wa Onna no ko!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16039",
+    "title": "Hanebado!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16069",
+    "title": "Tales of Demons and Gods",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16105",
+    "title": "Tsuki ga Michibiku Isekai Douchuu",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16168",
+    "title": "Diamond no Ace: Act II",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16444",
+    "title": "Radiant",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16482",
+    "title": "Made in Abyss",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16552",
+    "title": "BE BLUES ~Ao ni nare~",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16617",
+    "title": "Komi-san wa Komyushou Desu.",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16801",
+    "title": "In Another World, I'm Called: the Black Healer",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "16815",
+    "title": "Ao Ashi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "17170",
+    "title": "Ani no Yome to Kurashite Imasu.",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "17274",
+    "title": "Kaguya Wants to be Confessed To: The Geniuses' War of Love and Brains",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "17695",
+    "title": "Mahouka Koukou no Rettousei - Raihousha-hen",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "17709",
+    "title": "Kumo Desu ga, Nani ka?",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "17720",
+    "title": "Koushaku Reijou no Tashinami",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "17910",
+    "title": "Kawaii Joushi wo Komarasetai",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "18091",
+    "title": "Arifureta Shokugyou de Sekai Saikyou",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "18198",
+    "title": "Kimetsu no Yaiba",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "18663",
+    "title": "Re:Zero Kara Hajimeru Isekai Seikatsu - Daisanshou - Truth of Zero",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "19589",
+    "title": "Hiraheishi wa Kako wo Yumemiru",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "19630",
+    "title": "Gyaru to Otaku wa Wakari Aenai.",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "19692",
+    "title": "Vigilante: Boku no Hero Academia Illegals",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "19722",
+    "title": "Origin",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "19866",
+    "title": "Satsuriku no Tenshi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "19915",
+    "title": "Mousou Telepathy",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20068",
+    "title": "Star Martial God Technique",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20131",
+    "title": "Fumetsu no Anata e",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20316",
+    "title": "Rokudou no Onna-tachi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20398",
+    "title": "Isekai Yakkyoku",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20523",
+    "title": "BEASTARS",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20583",
+    "title": "The Mermaid Princess's Guilty Meal",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20679",
+    "title": "5Toubun no Hanayome",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20723",
+    "title": "Witch Hat Atelier",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20741",
+    "title": "Gaikotsu Kishi-sama, Tadaima Isekai e Odekake-chuu",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "20882",
+    "title": "Dr. Stone",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21055",
+    "title": "Tondemo Skill de Isekai Hourou Meshi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21063",
+    "title": "Mairimashita! Iruma-kun",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21395",
+    "title": "The Fable",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21443",
+    "title": "Maiko-san Chi no Makanai-san",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21562",
+    "title": "Kusuriya no Hitorigoto",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21599",
+    "title": "Ragna Crimson",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21647",
+    "title": "Fight Class 3",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21843",
+    "title": "Karakai Jouzu no (Moto) Takagi-san",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21893",
+    "title": "Otome Danshi ni Koisuru Otome",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21901",
+    "title": "Shikkaku Mon no Saikyou Kenja - Sekai Saikyou no Kenja ga Sara ni Tsuyokunaru Tame ni Tensei Shimashita",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "21944",
+    "title": "Yasei no Last Boss ga Arawareta!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22017",
+    "title": "Manuke na FPS Player ga Isekai e Ochita Baai",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22078",
+    "title": "Saotome Senshu, Hitakakusu",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22139",
+    "title": "Magi Craft Meister",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22143",
+    "title": "Jikkyou!! Izumi-kun no Koi Moyou",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22148",
+    "title": "Infinite Dendrogram",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22243",
+    "title": "MF Ghost",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22381",
+    "title": "Mushikago no Cagaster",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22440",
+    "title": "Jumyou wo Kaitotte Moratta. Ichinen ni Tsuki, Ichimanen de.",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22482",
+    "title": "Senryuu Shoujo",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22521",
+    "title": "Isekai Nonbiri Nouka",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22529",
+    "title": "Tokyo卍Revengers",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22631",
+    "title": "Ijiranaide, Nagatoro-san",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22637",
+    "title": "Otome Game no Hametsu Flag shika nai Akuyaku Reijou ni Tensei shite shimatta...",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22723",
+    "title": "Sewayaki Kitsune no Senko-san",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22801",
+    "title": "Raise wa Tanin ga Ii",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22809",
+    "title": "Soukyuu no Ariadne",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22816",
+    "title": "Class ga Isekai Shoukan sareta Naka Ore dake Nokotta n desu ga",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22843",
+    "title": "Saving 80,000 Gold Coins in the Different World for My Old Age",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "22925",
+    "title": "1000 Yen Hero",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23042",
+    "title": "Kuro no Shoukanshi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23277",
+    "title": "Maou-sama, Retry!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23279",
+    "title": "Wonder Cat Kyuu-chan",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23429",
+    "title": "The Last Human",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23439",
+    "title": "Tonikaku Cawaii",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23535",
+    "title": "Tengoku Daimakyou",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23569",
+    "title": "Gokushufudou: The Way of the House Husband",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23631",
+    "title": "Seijo no Maryoku wa Bannou Desu",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23661",
+    "title": "Yonakano Reiji ni Harem wo!!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23706",
+    "title": "Kami-tachi ni Hirowareta Otoko",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23774",
+    "title": "Tensei Shitara Dragon no Tamago Datta - Ibara no Dragon Road",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23777",
+    "title": "Dorei Yuugi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23811",
+    "title": "Boku no Kokoro no Yabai Yatsu",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23825",
+    "title": "Senpai ga Uzai Kouhai no Hanashi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "23842",
+    "title": "EDEN",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "24121",
+    "title": "Boku no Kanojo wa Saikoudesu!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "24153",
+    "title": "Senpai&times;Kouhai",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "24281",
+    "title": "Sokushi Cheat ga Saikyou Sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "24512",
+    "title": "Gacha wo Mawashite Nakama wo Fuyasu Saikyou no Bishoujo Gundan wo Tsukuriagero",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "24651",
+    "title": "Saihate no Paladin",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "24659",
+    "title": "Live Dungeon!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "24930",
+    "title": "Everlasting God of Sword",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "24988",
+    "title": "Gyaru Tensei ~ Isekai Seikatsu Majidarui ~",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "25264",
+    "title": "Danshi Koukousei wo Yashinaitai Onee-san no Hanashi.",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "25495",
+    "title": "Maou no Ore ga Dorei Elf wo Yome ni Shitanda ga, Dou Medereba ii?",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "25754",
+    "title": "Noumin Kanren no Skill Bakka Agetetara Naze ka Tsuyoku Natta",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "25862",
+    "title": "Pashiri na Boku to Koisuru Banchou-san",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "26297",
+    "title": "Maou ni Natta node, Dungeon Tsukutte Jingai Musume to Honobono suru",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "26359",
+    "title": "Jishou Akuyaku Reijou na Konyakusha no Kansatsu Kiroku",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "26380",
+    "title": "Mahoutsukai no Konyakusha",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "26504",
+    "title": "Boukensha ni Naritai to Miyako ni Deteitta Musume ga S Rank ni Natteta",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "27579",
+    "title": "Yuusha, Yamemasu",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "28471",
+    "title": "Kitsune Spirit",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "28612",
+    "title": "Tensei Kizoku no Isekai Boukenroku ~Jichou wo Shiranai Kamigami no Shito~",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "28659",
+    "title": "Itou-kun wa Koi wo Shiranai.",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "28700",
+    "title": "Bungo",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "28778",
+    "title": "Skeleton Soldier Couldn't Protect the Dungeon",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "28901",
+    "title": "Assassin de Aru Ore no Sutetasu ga Yuusha Yori mo Akiraka ni Tsuyoi Nodaga",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "28920",
+    "title": "Arafoo Kenja no Isekai Seikatsu Nikki",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "29179",
+    "title": "The Villainess Is Adored by the Crown Prince of the Neighboring Kingdom",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "29296",
+    "title": "Mahou? Sonna Koto Yori Kinniku da!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "29329",
+    "title": "Itai no wa Iya nanode Bougyo-Ryoku ni Kyokufuri Shitai to Omoimasu",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "29394",
+    "title": "Blue Lock",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "29407",
+    "title": "Urasekai Picnic",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "30123",
+    "title": "Internet Explorer",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "30171",
+    "title": "Overgeared",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "30308",
+    "title": "Modern MoGal",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "30442",
+    "title": "Bouken-ka ni Narou! ~Skill Board de Dungeon Kouryaku~",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "30744",
+    "title": "Tensei Kenja no Isekai Life ~Daini no Shokugyou wo Ete, Sekai Saikyou ni Narimashita~",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "30945",
+    "title": "Pseudo Harem",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31002",
+    "title": "Jimi na Kensei wa Sore Demo Saikyou Desu",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31068",
+    "title": "Love Fighter Shuravan",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31196",
+    "title": "I Was Trash",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31477",
+    "title": "Solo Leveling",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31551",
+    "title": "A Returner's Magic Should Be Special",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31792",
+    "title": "Mieruko-chan",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31962",
+    "title": "Maou Gakuin no Futekigousha",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31970",
+    "title": "Sekai no Owari ni Shiba Inu to",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "31975",
+    "title": "Asebi and Adventurers of Sky World",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "32043",
+    "title": "I Shaved. Then I Brought a High School Girl Home.",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "32680",
+    "title": "Gyaru and Dinosaur",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "32725",
+    "title": "Hitomi-chan Is Shy With Strangers",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "32834",
+    "title": "Oversimplified SCP",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "32944",
+    "title": "I Am a Child of This House",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "33010",
+    "title": "Tsukiiro no Invader",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "33085",
+    "title": "Kage no Jitsuryokusha ni Naritakute",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "33132",
+    "title": "All of Humanity Is Yuri Except for Me",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "33467",
+    "title": "Karate Shoukoushi Monogatari",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "33538",
+    "title": "Kengan Omega",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "33691",
+    "title": "Survive as the Hero's Wife",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "34165",
+    "title": "Shimeji Simulation",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "34196",
+    "title": "Moto Sekai Ichi'i Subchara Ikusei Nikki: Hai Player, Isekai wo Kouryakuchuu!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "34327",
+    "title": "Blue Period.",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "34605",
+    "title": "Release That Witch",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "34691",
+    "title": "Lady Baby",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "34944",
+    "title": "Soredemo Ayumu wa Yosetekuru",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "35479",
+    "title": "Fukushuu Kansuisha no Jinsei Nishuume Isekaitan",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "35536",
+    "title": "The Strongest Wizard Becomes a Countryside Guardsman After Taking an Arrow to the Knee",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "35675",
+    "title": "Boukensha License o Hakudatsu Sareta Ossan Dakedo, Manamusume ga Dekita no de Nonbiri Jinsei wo Oukasuru",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "35705",
+    "title": "SPY&times;FAMILY",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "35767",
+    "title": "The Story Between a Dumb Prefect and a High School Girl with an Inappropriate Skirt Length",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36075",
+    "title": "Metropolitan System",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36278",
+    "title": "King of Apocalypse",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36329",
+    "title": "Useless Ponko",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36491",
+    "title": "Karate Baka Isekai",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36496",
+    "title": "My Home Hero",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36635",
+    "title": "The Monster Duchess and Contract Princess",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36767",
+    "title": "The Villainess Will Crush Her Destruction End Through Modern Firepower",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36834",
+    "title": "Winner Takes All",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "36922",
+    "title": "Pale Throne",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "37378",
+    "title": "Second Life Ranker",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "37648",
+    "title": "The Flower That Was Bloomed by a Cloud",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "37856",
+    "title": "Player Reborn",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "39346",
+    "title": "The Duchess' 50 Tea Recipes",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "39447",
+    "title": "Is It Odd That I Became an Adventurer Even If I Graduated From the Witchcraft Institute?",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "39487",
+    "title": "Boku no Hero Academia: Team Up Mission",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "39799",
+    "title": "Spider-Man: Fake Red",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "39805",
+    "title": "A Capable Maid",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "40194",
+    "title": "Rebuild World",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "40300",
+    "title": "SHY",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "40377",
+    "title": "Tonari no Kinniku Joshi",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "40778",
+    "title": "Cheating Men Must Die",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "41740",
+    "title": "A Story About Wanting to Commit Suicide, but It's Scary so I Find a Yandere Girl to Kill Me, but It Doesn't Work",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "41767",
+    "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Daiyonshou - Seiiki to Gouyoku no Majou",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "42317",
+    "title": "To Be You, Even Just for a Day (Pre-serialization)",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "42390",
+    "title": "Kubo-san wa Boku (Mobu) wo Yurusanai",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "42490",
+    "title": "Hanging Out with a Gamer Girl",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "42846",
+    "title": "Kowloon Generic Romance",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "42938",
+    "title": "Sword and Magic: The Walking Hero",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "43417",
+    "title": "Touhou Suichouka ~ Lotus Eater-tachi no Suisei",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "43914",
+    "title": "The Second Coming of Gluttony",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "44087",
+    "title": "Past Life Regressor",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "44409",
+    "title": "I&rsquo;m an Evil God",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "44473",
+    "title": "To Be You, Even Just for a Day",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "44534",
+    "title": "Mezametara Saikyou Soubi to Uchuusen-mochi Datta no de, Ikkodate Mezashite Youhei Toshite Jiyuu ni Ikitai",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "44553",
+    "title": "The Galactic Navy Officer Becomes an Adventurer",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "44575",
+    "title": "Reverse Villain",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "45114",
+    "title": "Beware of the Brothers!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "45457",
+    "title": "Villain Initialization",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "45672",
+    "title": "Martial Arts of Demonic Humans",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "45903",
+    "title": "Dungeon Reset",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "46520",
+    "title": "These Two Will Be Married In 100 Days",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "46541",
+    "title": "This Gyaru Will Date the Otaku in 100 Days",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "47286",
+    "title": "Beware of the Villainess!",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "47754",
+    "title": "Death Is the Only Ending for the Villainess",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "50227",
+    "title": "Cultivator Against Hero Society",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  },
+  {
+    "id": "50954",
+    "title": "Kaiju No. 8",
+    "genres": null,
+    "views": null,
+    "createdAt": "2020-10-16T01:46:47.309Z",
+    "updatedAt": "2020-10-16T01:46:47.309Z"
+  }
+]
