@@ -22,10 +22,9 @@ class ScrollableListViewer extends StatefulWidget {
 
 class _ScrollableListViewerState extends State<ScrollableListViewer> {
   bool loading = true;
-  int _cutIndex = 0;
-  ScrollController _scrollController = new ScrollController();
-  List userobject; //TODO update underscores
-  List _objectsCut = [];
+  int cutIndex = 0;
+  ScrollController scrollController = new ScrollController();
+  List objectsCut = [];
 
   Widget createChild(object) {
     //TODO add onClick
@@ -38,33 +37,32 @@ class _ScrollableListViewerState extends State<ScrollableListViewer> {
     });
 
     double currentPos; // setting up scroll bar position to beginning
-    if (_scrollController.hasClients)
-      currentPos = _scrollController.position.maxScrollExtent;
+    if (scrollController.hasClients)
+      currentPos = scrollController.position.maxScrollExtent;
 
     List objectsSelected = widget
         .objectsSelected; // segmenting current object to limit database calls
-    List objectsCut = _objectsCut;
-    for (int i = _cutIndex;
+    for (int i = cutIndex;
         i <
-            (_cutIndex + 5 > objectsSelected.length
+            (cutIndex + 5 > objectsSelected.length
                 ? objectsSelected.length
-                : _cutIndex + 5);
+                : cutIndex + 5);
         i++) {
       objectsCut.add(objectsSelected[i]);
     }
-    _cutIndex += 5;
+    cutIndex += 5;
 
     setState(() {
       loading = false;
     });
     if (currentPos != null)
-      _scrollController = ScrollController(initialScrollOffset: currentPos);
+      scrollController = ScrollController(initialScrollOffset: currentPos);
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_objectsCut.length == 0 && widget.objectsSelected.length != 0) {
-      _cutIndex = 0;
+    if (objectsCut.length == 0 && widget.objectsSelected.length != 0) {
+      cutIndex = 0;
       main();
     }
     if (loading == true) return Loading();
@@ -76,7 +74,7 @@ class _ScrollableListViewerState extends State<ScrollableListViewer> {
           IconButton(
               icon: new Icon(Icons.arrow_circle_up),
               onPressed: () {
-                _scrollController.animateTo(
+                scrollController.animateTo(
                   0.0,
                   curve: Curves.easeOut,
                   duration: const Duration(milliseconds: 300),
@@ -85,8 +83,8 @@ class _ScrollableListViewerState extends State<ScrollableListViewer> {
           IconButton(
               icon: new Icon(Icons.arrow_circle_down),
               onPressed: () {
-                _scrollController.animateTo(
-                  _scrollController.position.maxScrollExtent,
+                scrollController.animateTo(
+                  scrollController.position.maxScrollExtent,
                   curve: Curves.easeOut,
                   duration: const Duration(milliseconds: 300),
                 );
@@ -94,13 +92,12 @@ class _ScrollableListViewerState extends State<ScrollableListViewer> {
         ],
       ),
       body: SingleChildScrollView(
-          controller: _scrollController,
+          controller: scrollController,
           padding: EdgeInsets.symmetric(vertical: 100.0),
           child: Column(children: [
-            Wrap(
-                children: listWrapper(_objectsCut, createChild).cast<Widget>()),
+            Wrap(children: listWrapper(objectsCut, createChild).cast<Widget>()),
             SizedBox(height: 20.0),
-            if (_objectsCut.length != widget.objectsSelected.length)
+            if (objectsCut.length != widget.objectsSelected.length)
               TextButton(onPressed: main, child: Text("Show more"))
           ])),
       bottomNavigationBar: bottomBar(context),
