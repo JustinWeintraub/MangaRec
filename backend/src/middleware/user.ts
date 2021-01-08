@@ -52,18 +52,18 @@ export default function userWare(app: Application) {
       });
   });
 
-  app.post(base + "addManga", helpers.passport, async (req, res) => {
+  app.post(base + "favoriteManga", helpers.passport, async (req, res) => {
     const { user } = req;
     const { manga } = req.body;
     Manga.findOne({ where: { title: manga } })
       .then((out) => {
-        if (out == null) {
-          return res.json(helpers.error("Invalid manga."));
-        }
-        const allManga = user["manga"];
+        if (out == null) return res.json(helpers.error("Invalid manga."));
+
+        let allManga = user["manga"];
         if (allManga.includes(manga))
-          return res.json(helpers.error("Duplicate manga."));
-        allManga.push(manga);
+          allManga = allManga.filter((item) => item != manga);
+        else allManga.push(manga);
+
         User.update(
           {
             manga: allManga,
@@ -82,27 +82,6 @@ export default function userWare(app: Application) {
       .catch(() => {
         return res.json(helpers.error("Invalid manga."));
       });
-  });
-
-  app.post(base + "removeManga", helpers.passport, async (req, res) => {
-    const { user } = req;
-    const manga: String = req.body.manga;
-
-    const allManga: Array<String> = user["manga"];
-    User.update(
-      {
-        manga: allManga.filter((item) => item != manga),
-      },
-      { where: { username: user["username"] } }
-    )
-      .then(() => {
-        return res.json(
-          helpers.success({
-            manga: allManga,
-          })
-        );
-      })
-      .catch((e) => res.json(helpers.error(e.message)));
   });
 
   app.post(

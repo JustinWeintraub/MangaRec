@@ -19,8 +19,11 @@ class Userware {
     return await postRequest(url, headers: jwtHeaders(jwt), data: null);
   }
 
-  changeManga(String jwt, manga, bool added) async {
-    String url = baseUrl + (added ? "removeManga" : "addManga");
+  favoriteManga(
+    String jwt,
+    manga,
+  ) async {
+    String url = baseUrl + "favoriteManga";
     return await postRequest(
       url,
       headers: jwtHeaders(jwt),

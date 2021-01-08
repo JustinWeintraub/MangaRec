@@ -31,10 +31,9 @@ class MangaLayoutState extends State<MangaLayout> {
 
   main() async {
     try {
-      manga["cover"] = await Mangaware()
-          .getCover(UserInheritedWidget.of(context).user['jwt'], manga["id"]);
-      dynamic userManga = (await Userware()
-          .getManga(UserInheritedWidget.of(context).user['jwt']))['manga'];
+      String jwt = UserInheritedWidget.of(context).user['jwt'];
+      manga["cover"] = await Mangaware().getCover(jwt, manga["id"]);
+      dynamic userManga = (await Userware().getManga(jwt))['manga'];
       if (userManga.contains(manga['title'])) favorited = true;
 
       setState(() {
@@ -45,8 +44,8 @@ class MangaLayoutState extends State<MangaLayout> {
 
   updateFavorite() async {
     // manga can be favorited, meaning a user likes the manga
-    dynamic res = await Userware().changeManga(
-        UserInheritedWidget.of(context).user['jwt'], manga, favorited);
+    dynamic res = await Userware()
+        .favoriteManga(UserInheritedWidget.of(context).user['jwt'], manga);
     if (res["success"] == true)
       setState(() {
         favorited = !favorited;
@@ -75,6 +74,10 @@ class MangaLayoutState extends State<MangaLayout> {
               IconButton(
                   icon: Icon(favorited ? Icons.favorite : Icons.favorite_border,
                       color: Colors.pink),
+                  onPressed: () => updateFavorite()),
+              IconButton(
+                  icon: Icon(favorited ? Icons.cancel_outlined : Icons.cancel,
+                      color: Colors.black),
                   onPressed: () => updateFavorite()),
               SizedBox(width: 10.0),
             ]),
