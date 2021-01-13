@@ -1,5 +1,3 @@
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
 //var AWS = require("aws-sdk");
 import AWS from "aws-sdk";
 AWS.config.getCredentials(function (err) {
@@ -9,7 +7,7 @@ AWS.config.getCredentials(function (err) {
 
 const s3 = new AWS.S3();
 
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 //const file = fs.readFileSync(path.resolve(__dirname, "../file.xml"));
 
 export const getImageFromId = async (bucket: string, id: string) => {

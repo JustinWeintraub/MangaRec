@@ -1,9 +1,12 @@
+import "regenerator-runtime/runtime";
 import {
   getAllMangaData,
   getMangaFromTags,
+  login,
 } from "../src/functionality/getManga";
 
-test("gets singular manga data correctly", async () => {
+test("gets singular manga data correctly from Mangadex", async () => {
+  await login();
   const mangaData = await getAllMangaData("One Piece");
   console.log(mangaData.authors);
   console.log(mangaData.cover);
