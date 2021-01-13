@@ -64,7 +64,7 @@ class _ScrollableListViewerState extends State<ScrollableListViewer> {
     if (objectsCut.length == 0 && widget.objectsSelected.length != 0) {
       cutIndex = 0;
       main();
-    }
+    } else if (widget.objectsSelected.length == 0) loading = false;
     if (loading == true) return Loading();
     return Scaffold(
       backgroundColor: Colors.orange[100],

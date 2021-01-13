@@ -15,6 +15,7 @@ class Recommend extends StatefulWidget {
 }
 
 class _RecommendState extends State<Recommend> {
+  bool loading = true;
   List<dynamic> suggestedManga;
   //final Function toggleView;
   //Wrapper({this.toggleView});
@@ -33,17 +34,18 @@ class _RecommendState extends State<Recommend> {
     if (request["success"] == true) {
       setState(() {
         suggestedManga = request["manga"];
+        loading = false;
       });
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    if (suggestedManga == null) {
+    if (loading == true) {
       main();
       return Loading();
     }
-    if (nextChild != null) return nextChild;
+    if (nextChild != null) return nextChild; // TODO what is this for?
     return ScrollableListViewer(
         suggestedManga, "Suggested Manga", (manga) => MangaLayout(manga));
   }
