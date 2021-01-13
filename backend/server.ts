@@ -1,6 +1,3 @@
-import express from "express";
-import bodyParser from "body-parser";
-import middleWare from "./src/middleware/middleware.js";
 import initializer from "./src/init/init.js";
 import "./src/database/s3Connect.js";
 import { autoUpdate } from "./src/functionality/updateManga.js";
