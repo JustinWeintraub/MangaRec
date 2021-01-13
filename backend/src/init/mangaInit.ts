@@ -7,9 +7,6 @@ import {
 } from "../functionality/getManga.js";
 import { uploadImageFromUrl } from "../database/s3Connect.js";
 import * as originalData from "../../dataComplete.json";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const fs = require("fs");
 
 const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 

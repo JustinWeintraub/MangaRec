@@ -6,7 +6,8 @@ const sequelize = new Sequelize(
   process.env.SQL_PASSWORD,
   {
     dialect: "postgres",
-    logging: console.log,
+    logging: false,
+    //logging: console.log,
   }
 );
 export default sequelize;
