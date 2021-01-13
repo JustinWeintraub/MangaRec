@@ -77,6 +77,7 @@ Map<int, String> genreConversion = {
 };
 List<String> genreNames = genreConversion.values.toList();
 
+//turns genres into states where everything is false
 Map<String, bool> getGenreStates() {
   Map<String, bool> res = {};
   for (int i = 0; i < genreNames.length; i++) {
