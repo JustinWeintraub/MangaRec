@@ -9,12 +9,12 @@ import pkg from "sequelize";
 const { Op } = pkg;
 
 export default function userWare(app: Application) {
-  app.get(base + "users", (req, res) =>
+  app.get(base + "users", (req: Request, res: Response) =>
     User.findAll().then((result) =>
       res.json(helpers.success({ result: result }))
     )
   );
-  app.post(base + "register", (req, res) => {
+  app.post(base + "register", (req: Request, res: Response) => {
     // TODO add way more to this
     User.create(req.body)
       .then(() => {
@@ -25,7 +25,7 @@ export default function userWare(app: Application) {
         return res.json(helpers.error(e.helpers.errors[0].message));
       });
   });
-  app.post(base + "login", (req, res) => {
+  app.post(base + "login", (req: Request, res: Response) => {
     const { username, password } = req.body;
     User.findOne({ where: { username: username } })
       .then(async (user) => {
@@ -52,43 +52,90 @@ export default function userWare(app: Application) {
       });
   });
 
-  app.post(base + "favoriteManga", helpers.passport, async (req, res) => {
-    const { user } = req;
-    const { manga } = req.body;
-    Manga.findOne({ where: { title: manga } })
-      .then((out) => {
-        if (out == null) return res.json(helpers.error("Invalid manga."));
+  app.post(
+    base + "favoriteManga",
+    helpers.passport,
+    async (req: Request, res: Response) => {
+      const { user } = req;
+      const { manga } = req.body;
 
-        let allManga = user["manga"];
-        if (allManga.includes(manga))
-          allManga = allManga.filter((item) => item != manga);
-        else allManga.push(manga);
+      const out = await helpers.getManga(manga);
+      if (out == null) return res.json(helpers.error("Invalid manga."));
 
-        User.update(
-          {
-            manga: allManga,
-          },
-          { where: { username: user["username"] } }
-        )
-          .then(() => {
-            return res.json(
-              helpers.success({
-                manga: allManga,
-              })
-            );
+      let userManga = user["manga"];
+      let ignoredManga = user["ignoredManga"];
+      if (userManga.includes(manga))
+        userManga = userManga.filter((item) => item != manga);
+      else {
+        userManga.push(manga);
+        ignoredManga = ignoredManga.filter((item) => item != manga);
+      }
+
+      User.update(
+        {
+          manga: userManga,
+          ignoredManga: ignoredManga,
+        },
+        { where: { username: user["username"] } }
+      ).then(() => {
+        return res.json(
+          helpers.success({
+            manga: userManga,
+            ignoredManga: ignoredManga,
           })
-          .catch((e) => res.json(helpers.error(e.message)));
-      })
-      .catch(() => {
-        return res.json(helpers.error("Invalid manga."));
+        );
       });
-  });
+    }
+  );
+
+  app.post(
+    base + "ignoreManga",
+    helpers.passport,
+    async (req: Request, res: Response) => {
+      const { user } = req;
+      const { manga } = req.body;
+
+      const out = await helpers.getManga(manga);
+      if (out == null) return res.json(helpers.error("Invalid manga."));
+
+      let userManga = user["manga"];
+      let ignoredManga = user["ignoredManga"];
+      if (ignoredManga.includes(manga))
+        ignoredManga = ignoredManga.filter((item) => item != manga);
+      else {
+        ignoredManga.push(manga);
+        userManga = userManga.filter((item) => item != manga);
+      }
+
+      User.update(
+        {
+          manga: userManga,
+          ignoredManga: ignoredManga,
+        },
+        { where: { username: user["username"] } }
+      )
+        .then(() => {
+          return res.json(
+            helpers.success({
+              manga: userManga,
+              ignoredManga: ignoredManga,
+            })
+          );
+        })
+        .catch((e) => res.json(helpers.error(e.message)));
+    }
+  );
 
   app.post(
     base + "getManga",
     helpers.passport,
     (req: Request, res: Response) => {
-      res.status(200).json(helpers.success({ manga: req.user["manga"] }));
+      res.status(200).json(
+        helpers.success({
+          manga: req.user["manga"],
+          ignoredManga: req.user["ignoredManga"],
+        })
+      );
     }
   );
 
@@ -97,7 +144,6 @@ export default function userWare(app: Application) {
     helpers.passport,
     (req: Request, res: Response) => {
       const { user } = req;
-      console.log(user.id);
       User.findAll({ where: { id: { [Op.not]: user.id } } })
         .then((users) => {
           const mangaFreq: Map<string, number> = new Map<string, number>();
@@ -111,7 +157,8 @@ export default function userWare(app: Application) {
                 else mangaFreq[manga] = 1;
               }
           });
-          for (const manga of user["manga"]) delete mangaFreq[manga]; // delete if user already has manga
+          for (const manga of user["manga"].concat(user["ignoredManga"]))
+            delete mangaFreq[manga]; // delete if user already has manga or is ignoring
 
           const resManga = Object.keys(mangaFreq) // sort by frequency of appearance and get top 5
             .sort((a, b) => mangaFreq[b] - mangaFreq[a])

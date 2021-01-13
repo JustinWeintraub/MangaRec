@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:frontend/inherited/User.dart';
 import 'package:frontend/middleware/mangaware.dart';
 import 'package:frontend/middleware/userware.dart';
+import 'package:frontend/shared/genres.dart';
 import 'package:frontend/shared/loading/loadingWidget.dart';
 
 // displays the info on a manga in a user friendly format
@@ -24,6 +25,7 @@ class MangaLayout extends StatefulWidget {
 class MangaLayoutState extends State<MangaLayout> {
   bool loading = true;
   bool favorited = false;
+  bool ignored = false;
   Map<String, dynamic> manga;
   MangaLayoutState(_manga) {
     manga = _manga;
@@ -33,23 +35,48 @@ class MangaLayoutState extends State<MangaLayout> {
     try {
       String jwt = UserInheritedWidget.of(context).user['jwt'];
       manga["cover"] = await Mangaware().getCover(jwt, manga["id"]);
-      dynamic userManga = (await Userware().getManga(jwt))['manga'];
-      if (userManga.contains(manga['title'])) favorited = true;
-
+      dynamic userInfo = (await Userware().getManga(jwt));
+      updateStatus(userInfo);
       setState(() {
         loading = false;
       });
-    } catch (e) {}
+    } catch (e) {
+      print(e);
+    }
   }
 
-  updateFavorite() async {
+  updateStatus(userInfo) {
+    if (userInfo['manga'].contains(manga['title'])) {
+      setState(() {
+        favorited = true;
+        ignored = false;
+      });
+    } else if (userInfo['ignoredManga'].contains(manga['title'])) {
+      setState(() {
+        favorited = false;
+        ignored = true;
+      });
+    } else {
+      setState(() {
+        favorited = false;
+        ignored = false;
+      });
+    }
+  }
+
+  updateFavorited() async {
     // manga can be favorited, meaning a user likes the manga
     dynamic res = await Userware()
         .favoriteManga(UserInheritedWidget.of(context).user['jwt'], manga);
-    if (res["success"] == true)
-      setState(() {
-        favorited = !favorited;
-      });
+    print(res);
+    updateStatus(res);
+  }
+
+  updateIgnored() async {
+    // manga can be favorited, meaning a user likes the manga
+    dynamic res = await Userware()
+        .ignoreManga(UserInheritedWidget.of(context).user['jwt'], manga);
+    updateStatus(res);
   }
 
   @override
@@ -74,11 +101,11 @@ class MangaLayoutState extends State<MangaLayout> {
               IconButton(
                   icon: Icon(favorited ? Icons.favorite : Icons.favorite_border,
                       color: Colors.pink),
-                  onPressed: () => updateFavorite()),
+                  onPressed: () => updateFavorited()),
               IconButton(
-                  icon: Icon(favorited ? Icons.cancel_outlined : Icons.cancel,
+                  icon: Icon(ignored ? Icons.cancel : Icons.cancel_outlined,
                       color: Colors.black),
-                  onPressed: () => updateFavorite()),
+                  onPressed: () => updateIgnored()),
               SizedBox(width: 10.0),
             ]),
             Container(

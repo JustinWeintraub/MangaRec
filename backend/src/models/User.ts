@@ -1,7 +1,6 @@
 import pkg from "sequelize";
 import sequelize from "../config/db.js";
 import bcrypt from "bcrypt";
-import Manga from "./Manga.js";
 
 const { DataTypes } = pkg;
 
@@ -43,7 +42,13 @@ let User = sequelize.define(
         },
       },
     },
+    // maybe have manga tiers here, manga1 2 3 4 5?
+    // or nested data types
     manga: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: [],
+    },
+    ignoredManga: {
       type: DataTypes.ARRAY(DataTypes.STRING),
       defaultValue: [],
     },
@@ -72,7 +77,7 @@ User.prototype.generateHash = function (password) {
         user.password = hash;
       })
       .catch((err) => {
-        throw new Error();
+        throw new Error(err);
       });
   });
 

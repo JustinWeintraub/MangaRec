@@ -1,6 +1,7 @@
 import jwt from "jwt-then";
 import { Request, Response, NextFunction } from "express";
 import User from "../models/User.js";
+import Manga from "../models/Manga.js";
 const functions = {
   // makes sure user is authorized
   passport: function (req: Request, res: Response, next: NextFunction) {
@@ -32,6 +33,16 @@ const functions = {
       message: msg,
       success: false,
     };
+  },
+  getManga: function (title: string) {
+    return Manga.findOne({ where: { title: title } })
+      .then((out) => {
+        if (out == null) return null;
+        else return out;
+      })
+      .catch(() => {
+        return null;
+      });
   },
 };
 

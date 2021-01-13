@@ -31,6 +31,18 @@ class Userware {
     );
   }
 
+  ignoreManga(
+    String jwt,
+    manga,
+  ) async {
+    String url = baseUrl + "ignoreManga";
+    return await postRequest(
+      url,
+      headers: jwtHeaders(jwt),
+      data: {'manga': manga['title']},
+    );
+  }
+
   suggestManga(String jwt) async {
     String url = baseUrl + "suggestManga";
     return await postRequest(
