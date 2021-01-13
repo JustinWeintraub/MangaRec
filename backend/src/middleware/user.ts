@@ -1,5 +1,5 @@
 import User from "../models/User.js";
-import Manga from "../models/Manga.js";
+import * as rec from "../functionality/rec.js";
 const base = "/user/";
 import bcrypt from "bcrypt";
 import jwt from "jwt-then";
@@ -146,23 +146,14 @@ export default function userWare(app: Application) {
       const { user } = req;
       User.findAll({ where: { id: { [Op.not]: user.id } } })
         .then((users) => {
-          const mangaFreq: Map<string, number> = new Map<string, number>();
-
-          users.forEach((otherUser) => {
-            if (user["manga"].some((item) => otherUser["manga"].includes(item)))
-              // contain similar manga
-              for (const manga of otherUser["manga"]) {
-                // adds to rec
-                if (mangaFreq[manga] != null) mangaFreq[manga]++;
-                else mangaFreq[manga] = 1;
-              }
-          });
-          for (const manga of user["manga"].concat(user["ignoredManga"]))
-            delete mangaFreq[manga]; // delete if user already has manga or is ignoring
-
-          const resManga = Object.keys(mangaFreq) // sort by frequency of appearance and get top 5
-            .sort((a, b) => mangaFreq[b] - mangaFreq[a])
-            .slice(0, 5);
+          const allUsers = Array.from(users);
+          allUsers.push(user);
+          const dataset = rec.convertUsersToDataset(allUsers);
+          const resManga = rec.recommendationEng(
+            dataset,
+            user["username"],
+            rec.euclideanScore
+          );
 
           return res.status(200).json(helpers.success({ manga: resManga }));
         })

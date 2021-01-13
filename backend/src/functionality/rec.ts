@@ -1,62 +1,20 @@
-// TODO: incomplete, implement with code
-let dataset = {
-  "Lisa Rose": {
-    "Lady in the Water": 2.5,
-    "Snakes on a Plane": 3.5,
-    "Just My Luck": 3.0,
-    "Superman Returns": 3.5,
-    "You, Me and Dupree": 2.5,
-    "The Night Listener": 3.0,
-  },
-  "Gene Seymour": {
-    "Lady in the Water": 3.0,
-    "Snakes on a Plane": 3.5,
-    "Just My Luck": 1.5,
-    "Superman Returns": 5.0,
-    "The Night Listener": 3.0,
-    "You, Me and Dupree": 3.5,
-  },
-
-  "Michael Phillips": {
-    "Lady in the Water": 2.5,
-    "Snakes on a Plane": 3.0,
-    "Superman Returns": 3.5,
-    "The Night Listener": 4.0,
-  },
-  "Claudia Puig": {
-    "Snakes on a Plane": 3.5,
-    "Just My Luck": 3.0,
-    "The Night Listener": 4.5,
-    "Superman Returns": 4.0,
-    "You, Me and Dupree": 2.5,
-  },
-
-  "Mick LaSalle": {
-    "Lady in the Water": 3.0,
-    "Snakes on a Plane": 4.0,
-    "Just My Luck": 2.0,
-    "Superman Returns": 3.0,
-    "The Night Listener": 3.0,
-  },
-
-  "Jack Matthews": {
-    "Lady in the Water": 3.0,
-    "Snakes on a Plane": 4.0,
-    "The Night Listener": 3.0,
-    "Superman Returns": 5.0,
-    "You, Me and Dupree": 3.5,
-  },
-
-  Toby: {
-    "Snakes on a Plane": 4.5,
-    "You, Me and Dupree": 1.0,
-    "Superman Returns": 4.0,
-  },
-};
-
+export function convertUsersToDataset(users) {
+  const database = {};
+  for (let user of users) {
+    const userData = {};
+    for (let manga of user["manga"]) {
+      userData[manga] = 5;
+    }
+    for (let manga of user["ignoredManga"]) {
+      userData[manga] = 1;
+    }
+    database[user["username"]] = userData;
+  }
+  return database;
+}
 // two scores to choose from
 //calculate the euclidean distance btw two item
-const euclidean_score = function (dataset, p1, p2) {
+export function euclideanScore(dataset, p1, p2) {
   //store item ining in both item
   //if dataset is in p1 and p2
   //store it in as one
@@ -87,7 +45,7 @@ const euclidean_score = function (dataset, p1, p2) {
   //we make it in btwn 0 and 1
   let sum_sqrt = 1 / (1 + Math.sqrt(sum));
   return sum_sqrt;
-};
+}
 
 function getIn(dataset, p1, p2) {
   let inp1p2 = {};
@@ -98,7 +56,7 @@ function getIn(dataset, p1, p2) {
   }
   return inp1p2;
 }
-function pearson_correlation(dataset, p1, p2) {
+export function pearsonCorrelation(dataset, p1, p2) {
   // returns -1 to 1, -1 being far 1 being close
   const inp1p2 = getIn(dataset, p1, p2);
   let num_existence = Object.keys(inp1p2).length;
@@ -129,7 +87,7 @@ function pearson_correlation(dataset, p1, p2) {
     return val;
   }
 }
-function similar_user(dataset, person, num_user, distance) {
+export function similarUser(dataset, person, num_user, distance) {
   let scores = [];
   for (const others in dataset) {
     if (others != person && typeof dataset[others] != "function") {
@@ -147,8 +105,8 @@ function similar_user(dataset, person, num_user, distance) {
   return score;
 }
 
-var recommendation_eng = function (dataset, person, distance) {
-  var totals = {
+export function recommendationEng(dataset, person, distance): string[] {
+  let totals = {
       //you can avoid creating a setter function
       //like this in the object you found them
       //since it just check if the object has the property if not create
@@ -171,13 +129,13 @@ var recommendation_eng = function (dataset, person, distance) {
         this[props] += value;
       },
     },
-    rank_lst = [];
-  for (var other in dataset) {
+    rank_list = [];
+  for (let other in dataset) {
     if (other === person) continue;
-    var similar = distance(dataset, person, other);
+    let similar = distance(dataset, person, other);
 
     if (similar <= 0) continue;
-    for (var item in dataset[other]) {
+    for (let item in dataset[other]) {
       if (!(item in dataset[person]) || dataset[person][item] == 0) {
         //the setter help to make this look nice.
         totals.setDefault(item, dataset[other][item] * similar);
@@ -186,26 +144,46 @@ var recommendation_eng = function (dataset, person, distance) {
     }
   }
 
-  for (var item in totals) {
+  for (let item in totals) {
     //this what the setter function does
     //so we have to find a way to avoid the function in the object
     if (typeof totals[item] != "function") {
-      var val = totals[item] / simsum[item];
-      rank_lst.push({ val: val, items: item });
+      let val = totals[item] / simsum[item];
+      rank_list.push({ val: val, items: item });
     }
   }
-  rank_lst.sort(function (a, b) {
+  rank_list.sort(function (a, b) {
     return b.val < a.val ? -1 : b.val > a.val ? 1 : b.val >= a.val ? 0 : NaN;
   });
-  var recommend = [];
-  for (var i in rank_lst) {
-    recommend.push(rank_lst[i].items);
-  }
-  return [rank_lst, recommend];
-};
-console.log(pearson_correlation(dataset, "Lisa Rose", "Jack Matthews"));
+  let recommend = [];
+  for (let i in rank_list)
+    if (rank_list[i].val >= 3) recommend.push(rank_list[i].items);
 
-console.log(euclidean_score(dataset, "Lisa Rose", "Jack Matthews"));
+  return recommend;
+  //return [rank_list, recommend];
+}
 
-console.log(similar_user(dataset, "Jack Matthews", 3, pearson_correlation));
-console.log(recommendation_eng(dataset, "Jack Matthews", pearson_correlation));
+export function basicRec(user, otherUsers) {
+  const mangaFreq: Map<string, number> = new Map<string, number>();
+  otherUsers.forEach((otherUser) => {
+    if (user["manga"].some((item) => otherUser["manga"].includes(item)))
+      // contain similar manga
+      for (const manga of otherUser["manga"]) {
+        // adds to rec
+        if (mangaFreq[manga] != null) mangaFreq[manga]++;
+        else mangaFreq[manga] = 1;
+      }
+  });
+  for (const manga of user["manga"].concat(user["ignoredManga"]))
+    delete mangaFreq[manga]; // delete if user already has manga or is ignoring
+
+  const resManga = Object.keys(mangaFreq) // sort by frequency of appearance and get top 5
+    .sort((a, b) => mangaFreq[b] - mangaFreq[a]);
+  return resManga;
+}
+//console.log(pearson_correlation(dataset, "Lisa Rose", "Jack Matthews"));
+
+//console.log(euclidean_score(dataset, "Lisa Rose", "Jack Matthews"));
+
+//console.log(similar_user(dataset, "Jack Matthews", 3, pearson_correlation));
+//console.log(recommendationEng(dataset, "Jack Matthews", pearson_correlation));
