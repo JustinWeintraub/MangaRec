@@ -2,17 +2,12 @@ import express from "express";
 import bodyParser from "body-parser";
 import middleWare from "./src/middleware/middleware.js";
 import initializer from "./src/init/init.js";
-import sequelize from "./src/config/db.js";
 import "./src/database/s3Connect.js";
 import { autoUpdate } from "./src/functionality/updateManga.js";
-
-const app = express();
-app.use(bodyParser.json());
-//app.use(express.static("middleware/public"));
-middleWare(app);
+import { createServer } from "./src/config/createServer.js";
 
 (async () => {
-  await sequelize.sync();
+  const app = await createServer();
   initializer();
   autoUpdate();
   app.listen(8090, () => console.log("App listening on port 8090!"));
