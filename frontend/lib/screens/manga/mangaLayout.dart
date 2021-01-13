@@ -131,9 +131,18 @@ class MangaLayoutState extends State<MangaLayout> {
               ],
             ),
             Wrap(
-                children: manga['authors']
-                    .map<Widget>((item) => new Text(item + ". "))
+                alignment: WrapAlignment.center,
+                children: manga['genres']
+                    .map<Widget>((item) =>
+                        new Text(genreConversion[int.parse(item)] + " "))
                     .toList()),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+              Icon(Icons.create),
+              Wrap(
+                  children: manga['authors']
+                      .map<Widget>((item) => new Text(item + ". "))
+                      .toList())
+            ])
           ]));
   }
 }
