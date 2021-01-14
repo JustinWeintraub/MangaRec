@@ -1,8 +1,11 @@
 import 'dart:convert';
 import 'package:frontend/middleware/helpers.dart';
+import 'dart:io' show Platform;
 
 class Mangaware {
-  String baseUrl = "http://localhost:8090/manga/";
+  String baseUrl = Platform.isAndroid
+      ? "http://10.0.2.2:8090/manga/"
+      : "http://localhost:8090/manga/";
   Future<Map<String, dynamic>> getAll(jwt) async {
     //TODO
     String url = baseUrl + "getAll";

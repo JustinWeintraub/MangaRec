@@ -1,7 +1,10 @@
 import 'package:frontend/middleware/helpers.dart';
+import 'dart:io' show Platform;
 
 class Userware {
-  String baseUrl = "http://localhost:8090/user/";
+  String baseUrl = Platform.isAndroid
+      ? "http://10.0.2.2:8090/user/"
+      : "http://localhost:8090/user/";
   Future<Map<String, dynamic>> register(name, pass) async {
     String url = baseUrl + "register";
     return await postRequest(url,
