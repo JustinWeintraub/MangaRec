@@ -32,7 +32,7 @@ class _ProfileState extends State<Profile> {
       if (mangaRequest["success"] == false) return;
       //TODO errors in not working
     }
-    if (request["success"] == true) {
+    if (request["success"] == true && mounted) {
       setState(() {
         manga = request["manga"];
       });
@@ -42,9 +42,10 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     addManga() {
-      setState(() {
-        nextChild = MangaWrapper();
-      });
+      if (mounted)
+        setState(() {
+          nextChild = MangaWrapper();
+        });
     }
 
     Widget createChild(manga) {

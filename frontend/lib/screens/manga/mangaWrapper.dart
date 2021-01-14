@@ -22,7 +22,7 @@ class _MangaWrapperState extends State<MangaWrapper> {
   void main() async {
     Map<String, dynamic> data =
         await Mangaware().getAll(UserInheritedWidget.of(context).user['jwt']);
-    if (data["success"]) {
+    if (data["success"] && mounted) {
       setState(() {
         loading = false;
         child = Search(data["manga"], searchComplete);

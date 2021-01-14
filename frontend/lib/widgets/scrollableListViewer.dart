@@ -32,9 +32,10 @@ class _ScrollableListViewerState extends State<ScrollableListViewer> {
   }
 
   main() {
-    setState(() {
-      loading = true;
-    });
+    if (mounted)
+      setState(() {
+        loading = true;
+      });
 
     double currentPos; // setting up scroll bar position to beginning
     if (scrollController.hasClients)
@@ -52,9 +53,10 @@ class _ScrollableListViewerState extends State<ScrollableListViewer> {
     }
     cutIndex += 5;
 
-    setState(() {
-      loading = false;
-    });
+    if (mounted)
+      setState(() {
+        loading = false;
+      });
     if (currentPos != null)
       scrollController = ScrollController(initialScrollOffset: currentPos);
   }

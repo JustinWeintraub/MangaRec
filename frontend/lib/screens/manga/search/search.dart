@@ -37,10 +37,11 @@ class _SearchState extends State<Search> {
 
   void onGenreSubmit([genreStates]) {
     // _searchQueryController.text = newQuery;
-    setState(() {
-      if (genreStates != null) _genreStates = genreStates;
-      _displayManga = !_displayManga;
-    });
+    if (mounted)
+      setState(() {
+        if (genreStates != null) _genreStates = genreStates;
+        _displayManga = !_displayManga;
+      });
   }
 
   void onSearchSubmit() {

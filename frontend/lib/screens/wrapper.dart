@@ -14,9 +14,10 @@ class Wrapper extends StatefulWidget {
 class _WrapperState extends State<Wrapper> {
   dynamic user;
   updateUser(newUser) {
-    this.setState(() {
-      user = newUser;
-    });
+    if (mounted)
+      this.setState(() {
+        user = newUser;
+      });
   }
 
   Widget updateChild(UserInheritedWidget inherited, Widget child) {

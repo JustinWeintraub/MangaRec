@@ -38,10 +38,11 @@ class _GenreSearchState extends State<GenreSearch> {
     chips.forEach((chip) {
       chip.updateState(value);
     });
-    setState(() {
-      _allState = value;
-      _genreStates = _genreStates;
-    });
+    if (mounted)
+      setState(() {
+        _allState = value;
+        _genreStates = _genreStates;
+      });
   }
 
   void onGenreChange(name, value) {

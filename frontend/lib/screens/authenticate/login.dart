@@ -73,7 +73,7 @@ class _LoginState extends State<Login> {
                               setState(() => loading = true);
                               dynamic result =
                                   await Userware().login(username, password);
-                              if (result['success'] == false)
+                              if (result['success'] == false && mounted)
                                 setState(() => {
                                       loading = false,
                                       error = result['message']

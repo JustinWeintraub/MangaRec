@@ -31,7 +31,7 @@ class _RecommendState extends State<Recommend> {
       request["manga"][i] = mangaRequest["manga"];
       if (mangaRequest["success"] == false) return;
     }
-    if (request["success"] == true) {
+    if (request["success"] == true && mounted) {
       setState(() {
         suggestedManga = request["manga"];
         loading = false;

@@ -37,30 +37,33 @@ class MangaLayoutState extends State<MangaLayout> {
       manga["cover"] = await Mangaware().getCover(jwt, manga["id"]);
       dynamic userInfo = (await Userware().getManga(jwt));
       updateStatus(userInfo);
-      setState(() {
-        loading = false;
-      });
+      if (mounted)
+        setState(() {
+          loading = false;
+        });
     } catch (e) {
       print(e);
     }
   }
 
   updateStatus(userInfo) {
-    if (userInfo['manga'].contains(manga['title'])) {
-      setState(() {
-        favorited = true;
-        ignored = false;
-      });
-    } else if (userInfo['ignoredManga'].contains(manga['title'])) {
-      setState(() {
-        favorited = false;
-        ignored = true;
-      });
-    } else {
-      setState(() {
-        favorited = false;
-        ignored = false;
-      });
+    if (mounted) {
+      if (userInfo['manga'].contains(manga['title'])) {
+        setState(() {
+          favorited = true;
+          ignored = false;
+        });
+      } else if (userInfo['ignoredManga'].contains(manga['title'])) {
+        setState(() {
+          favorited = false;
+          ignored = true;
+        });
+      } else {
+        setState(() {
+          favorited = false;
+          ignored = false;
+        });
+      }
     }
   }
 
