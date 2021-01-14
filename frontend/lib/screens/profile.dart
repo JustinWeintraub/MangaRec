@@ -18,23 +18,25 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   List<dynamic> manga;
+  List<dynamic> ignoredManga;
   Widget nextChild;
+
+  goToManga(title, jwt) async {
+    dynamic request = await Mangaware().getManga(jwt, title);
+    if (request["success"] && mounted)
+      setState(() {
+        nextChild = ScrollableListViewer(
+            [request["manga"]], "User's Manga", (manga) => MangaLayout(manga));
+      });
+  }
 
   main() async {
     String jwt = UserInheritedWidget.of(context).user['jwt'];
     dynamic request = await Userware().getManga(jwt);
-    //TODO if error realize it
-    if (request["success"] == false) return;
-    for (int i = 0; i < request["manga"].length; i++) {
-      dynamic mangaRequest =
-          await Mangaware().getManga(jwt, request["manga"][i]);
-      request["manga"][i] = mangaRequest["manga"];
-      if (mangaRequest["success"] == false) return;
-      //TODO errors in not working
-    }
     if (request["success"] == true && mounted) {
       setState(() {
         manga = request["manga"];
+        ignoredManga = request["ignoredManga"];
       });
     }
   }
@@ -48,18 +50,16 @@ class _ProfileState extends State<Profile> {
         });
     }
 
-    Widget createChild(manga) {
+    Widget createChild(title, jwt) {
       return TextButton(
           onPressed: () {
-            setState(() {
-              nextChild = ScrollableListViewer(
-                  [manga], "User's Manga", (manga) => MangaLayout(manga));
-            });
+            goToManga(title, jwt);
           },
-          child: Text(manga['title']));
+          child: Text(title));
     }
 
-    dynamic userData = parseJwt(UserInheritedWidget.of(context).user['jwt']);
+    String jwt = UserInheritedWidget.of(context).user['jwt'];
+    dynamic userData = parseJwt(jwt);
     if (manga == null) {
       main();
       return Loading();
@@ -92,8 +92,18 @@ class _ProfileState extends State<Profile> {
                 padding: const EdgeInsets.only(top: 10, left: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: listWrapper(manga, createChild).cast<Widget>(),
-                ))
+                  children: listWrapper(manga, (data) => createChild(data, jwt))
+                      .cast<Widget>(),
+                )),
+            Text("Ignored Manga", style: TextStyle(fontSize: 30.0)),
+            SingleChildScrollView(
+                padding: const EdgeInsets.only(top: 10, left: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: listWrapper(
+                          ignoredManga, (data) => createChild(data, jwt))
+                      .cast<Widget>(),
+                )),
           ])),
       bottomNavigationBar: bottomBar(context),
     );
