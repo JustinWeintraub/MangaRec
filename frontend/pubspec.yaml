@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_spinkit: "^4.0.0"
   http: "^0.12.2"
+  material_design_icons_flutter: ^4.0.5855
 
 dev_dependencies:
   flutter_test:

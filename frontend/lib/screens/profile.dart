@@ -4,12 +4,13 @@ import 'package:frontend/inherited/User.dart';
 import 'package:frontend/middleware/mangaware.dart';
 import 'package:frontend/middleware/userware.dart';
 import 'package:frontend/screens/manga/mangaLayout.dart';
-import 'package:frontend/screens/manga/mangaWrapper.dart';
 import 'package:frontend/shared/bottomBar.dart';
 import 'package:frontend/shared/functions.dart';
 import 'package:frontend/shared/listWrapper.dart';
 import 'package:frontend/shared/loading/loadingPage.dart';
 import 'package:frontend/widgets/scrollableListViewer.dart';
+
+import 'manga/search/search.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -46,7 +47,7 @@ class _ProfileState extends State<Profile> {
     addManga() {
       if (mounted)
         setState(() {
-          nextChild = MangaWrapper();
+          nextChild = Search();
         });
     }
 

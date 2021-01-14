@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/screens/manga/mangaWrapper.dart';
+import 'package:frontend/screens/manga/search/search.dart';
 import 'package:frontend/screens/profile.dart';
 import 'package:frontend/screens/recommend.dart';
 import 'package:frontend/shared/contexedRoute.dart';
@@ -26,8 +26,8 @@ Widget bottomBar(context) {
             label: 'Search',
             icon: IconButton(
                 icon: Icon(Icons.search),
-                onPressed: () => Navigator.push(
-                    context, contexedRoute(context, MangaWrapper())))),
+                onPressed: () =>
+                    Navigator.push(context, contexedRoute(context, Search())))),
         BottomNavigationBarItem(
             label: 'Logout',
             icon: IconButton(

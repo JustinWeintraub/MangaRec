@@ -1,78 +1,91 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:frontend/inherited/User.dart';
+import 'package:frontend/middleware/mangaware.dart';
+import 'package:frontend/screens/manga/mangaLayout.dart';
 import 'package:frontend/screens/manga/search/genreSearch.dart';
 import 'package:frontend/shared/bottomBar.dart';
+import 'package:frontend/shared/contexedRoute.dart';
 import 'package:frontend/shared/genres.dart';
+import 'package:frontend/widgets/scrollableListViewer.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Search extends StatefulWidget {
-  List<dynamic> _allManga;
-  Function _callback;
-
   bool isSelected = false;
-  Search(allManga, callback) {
-    _allManga = allManga;
-    _callback = callback;
-  }
+
   @override
-  _SearchState createState() => _SearchState(_allManga, _callback);
+  _SearchState createState() => _SearchState();
 }
 
 class _SearchState extends State<Search> {
-  List<dynamic> _allManga;
-  Function _callback;
-  Map<String, bool> _genreStates = getGenreStates();
-  bool _displayManga = false;
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  TextEditingController _searchQueryController = TextEditingController();
+  Map<String, bool> genreStates = getGenreStates();
+  bool displayManga = false;
+  String sortValue = 'views DESC';
+  final GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey<ScaffoldState>();
+  TextEditingController searchQueryController = TextEditingController();
 
-  _SearchState(allManga, callback) {
-    _allManga = allManga;
-    _callback = callback;
-  }
+  _SearchState();
 
   void onGenreChange(name, value) {
-    _genreStates[name] =
+    genreStates[name] =
         value; // TODO would this work? is set state not necessary
   }
 
-  void onGenreSubmit([genreStates]) {
-    // _searchQueryController.text = newQuery;
+  void onGenreSubmit([_genreStates]) {
+    // searchQueryController.text = newQuery;
     if (mounted)
       setState(() {
-        if (genreStates != null) _genreStates = genreStates;
-        _displayManga = !_displayManga;
+        if (_genreStates != null) genreStates = genreStates;
+        displayManga = !displayManga;
       });
   }
 
-  void onSearchSubmit() {
-    List<dynamic> currentManga = new List();
-    for (Map manga in _allManga) {
-      // checking to see if potential mangas match search parameters
-      // TODO do in backend?
-      if (manga['title'].contains(_searchQueryController.text)) {
-        for (String genre in manga['genres']) {
-          if (_genreStates[genreConversion[int.parse(genre)]] == true) {
-            currentManga.add(manga);
-            break;
-          }
-        }
-      }
+  void generateScafoldKey(String text) {
+    scaffoldKey.currentState.showSnackBar(SnackBar(
+      backgroundColor: Colors.red[400],
+      content: new Text(text),
+      duration: new Duration(seconds: 5),
+    ));
+  }
+
+  void onSearchSubmit() async {
+    List<String> sortSplit = sortValue.split(" ");
+
+    List<int> genreCodes = [];
+    for (String genre in genreStates.keys) {
+      if (genreStates[genre] == true)
+        genreCodes.add(genreCodeConversion[genre]);
     }
-    if (currentManga.length == 0) // needs to be some mangas in search result
-      _scaffoldKey.currentState.showSnackBar(SnackBar(
-        backgroundColor: Colors.red[400],
-        content: new Text('Invalid search.'),
-        duration: new Duration(seconds: 5),
-      ));
-    else
-      _callback(currentManga); // return result
+    Map<String, dynamic> request = await Mangaware().getAll(
+        UserInheritedWidget.of(context).user['jwt'],
+        searchQueryController.text,
+        genreCodes,
+        sortSplit[0],
+        sortSplit[1]);
+    if (!request["success"]) {
+      generateScafoldKey('Something broke.');
+      return;
+    }
+
+    if (request["manga"].length ==
+        0) // needs to be some mangas in search result
+      generateScafoldKey('Invalid search.');
+    else {
+      Navigator.push(
+          context,
+          contexedRoute(
+              context,
+              ScrollableListViewer(request["manga"], "Manga List",
+                  (manga) => MangaLayout(manga))));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     Widget body;
-    if (_displayManga)
-      body = GenreSearch(_genreStates, onGenreSubmit);
+
+    if (displayManga)
+      body = GenreSearch(genreStates, onGenreSubmit);
     else {
       body = Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -87,7 +100,7 @@ class _SearchState extends State<Search> {
           Container(
               width: 300.0,
               child: TextField(
-                controller: _searchQueryController,
+                controller: searchQueryController,
                 decoration: InputDecoration(
                   hintText: "Search Keyword...",
                   border: InputBorder.none,
@@ -96,6 +109,46 @@ class _SearchState extends State<Search> {
                 style: TextStyle(color: Colors.black, fontSize: 16.0),
                 textAlign: TextAlign.center,
               )),
+          SizedBox(height: 20.0),
+          DropdownButton<String>(
+              value: sortValue,
+              icon: Icon(Icons.arrow_drop_down),
+              onChanged: (String newValue) {
+                if (mounted)
+                  setState(() {
+                    sortValue = newValue;
+                  });
+              },
+              items: [
+                DropdownMenuItem<String>(
+                  value: "views DESC",
+                  child: Row(children: [
+                    Text("Views"),
+                    Icon(MdiIcons.fromString('sort-numeric-descending'))
+                  ]),
+                ),
+                DropdownMenuItem<String>(
+                  value: "views ASC",
+                  child: Row(children: [
+                    Text("Views"),
+                    Icon(MdiIcons.fromString('sort-numeric-ascending'))
+                  ]),
+                ),
+                DropdownMenuItem<String>(
+                  value: "title ASC",
+                  child: Row(children: [
+                    Text("Title"),
+                    Icon(MdiIcons.fromString('sort-alphabetical-ascending'))
+                  ]),
+                ),
+                DropdownMenuItem<String>(
+                  value: "title DESC",
+                  child: Row(children: [
+                    Text("Title"),
+                    Icon(MdiIcons.fromString('sort-alphabetical-descending'))
+                  ]),
+                ),
+              ]),
           SizedBox(height: 20.0),
           RaisedButton(
               child: Text("Submit"),
@@ -111,6 +164,6 @@ class _SearchState extends State<Search> {
         backgroundColor: Colors.orange[100],
         body: body,
         bottomNavigationBar: bottomBar(context),
-        key: _scaffoldKey);
+        key: scaffoldKey);
   }
 }

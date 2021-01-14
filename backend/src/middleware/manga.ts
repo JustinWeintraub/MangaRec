@@ -9,17 +9,21 @@ const { Op } = pkg;
 
 const base = "/manga/";
 export default function mangaWare(app: Application) {
-  app.get(
+  app.post(
     base + "getAll",
     helpers.passport,
     (req: Request, res: Response) => {
       const { user } = req;
+      const { sortVal, sortDir, title, genres } = req.body;
       Manga.findAll({
-        order: [["views", "DESC"]],
+        order: [[sortVal, sortDir]],
         where: {
-          title: { [Op.notIn]: user["ignoredManga"] },
+          title: { [Op.notIn]: user["ignoredManga"], [Op.iLike]: `%${title}%` },
+          genres: { [Op.overlap]: genres },
         },
-      }).then((result) => res.json(helpers.success({ manga: result })));
+      })
+        .then((result) => res.json(helpers.success({ manga: result })))
+        .catch((e) => res.json(helpers.error(e.message)));
     }
     //const json = JSON.stringify(result);
   );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/inherited/User.dart';
 import 'package:frontend/screens/authenticate/authentication.dart';
-import 'package:frontend/screens/manga/mangaWrapper.dart';
 import 'package:frontend/screens/profile.dart';
 
 // TODO: wrapper incomplete
@@ -37,18 +36,5 @@ class _WrapperState extends State<Wrapper> {
         updateUser: updateUser,
         child: child,
         updateChild: updateChild);
-    /*if (loading == true) main();
-    //          backgroundColor: Colors.orange[100],
-
-    return Scaffold(
-        backgroundColor: Colors.orange[100],
-        body: child); //Container(color: Color(121212), child: child);*/
-    /* final user = Provider.of<User>(context);
-    print(user);
-    //return either home or authenticate widget
-    if (user == null) {
-      return Authenticate();
-    } else
-      return Home();*/
   }
 }

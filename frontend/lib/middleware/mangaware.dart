@@ -6,10 +6,16 @@ class Mangaware {
   String baseUrl = Platform.isAndroid
       ? "http://10.0.2.2:8090/manga/"
       : "http://localhost:8090/manga/";
-  Future<Map<String, dynamic>> getAll(jwt) async {
+  Future<Map<String, dynamic>> getAll(
+      jwt, title, genres, sortVal, sortDir) async {
     //TODO
     String url = baseUrl + "getAll";
-    return getRequest(url, headers: jwtHeaders(jwt));
+    return postRequest(url, headers: jwtHeaders(jwt), data: {
+      'title': title,
+      'genres': genres,
+      'sortVal': sortVal,
+      'sortDir': sortDir
+    });
   }
 
   dynamic getCover(jwt, id) async {

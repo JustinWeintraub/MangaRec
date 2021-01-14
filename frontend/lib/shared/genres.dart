@@ -75,6 +75,10 @@ Map<int, String> genreConversion = {
   83: "Incest",
   84: "Mafia"
 };
+
+Map<String, int> genreCodeConversion =
+    genreConversion.map((k, v) => MapEntry(v, k));
+
 List<String> genreNames = genreConversion.values.toList();
 
 //turns genres into states where everything is false
