@@ -4,15 +4,23 @@ import helpers from "./helpers.js";
 
 import { Application, Request, Response } from "express";
 
+import pkg from "sequelize";
+const { Op } = pkg;
+
 const base = "/manga/";
 export default function mangaWare(app: Application) {
   app.get(
     base + "getAll",
     helpers.passport,
-    (req: Request, res: Response) =>
-      Manga.findAll({ order: [["views", "DESC"]] }).then((result) =>
-        res.json(helpers.success({ manga: result }))
-      )
+    (req: Request, res: Response) => {
+      const { user } = req;
+      Manga.findAll({
+        order: [["views", "DESC"]],
+        where: {
+          title: { [Op.notIn]: user["ignoredManga"] },
+        },
+      }).then((result) => res.json(helpers.success({ manga: result })));
+    }
     //const json = JSON.stringify(result);
   );
   app.get(
