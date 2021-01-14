@@ -83,7 +83,7 @@ class MangaLayoutState extends State<MangaLayout> {
   Widget build(BuildContext context) {
     if (loading == true) {
       main();
-      return loadingWidget();
+      return LoadingWidget();
     } else
       return Container(
           child: Column(

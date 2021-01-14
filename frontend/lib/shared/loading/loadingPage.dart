@@ -4,7 +4,6 @@ import 'package:frontend/shared/bottomBar.dart';
 import 'package:frontend/shared/loading/loadingWidget.dart';
 
 class Loading extends StatelessWidget {
-  // TODO only option should be logout
   @override
   Widget build(BuildContext context) {
     Widget actions = UserInheritedWidget.of(context).user == null
@@ -14,7 +13,7 @@ class Loading extends StatelessWidget {
         appBar: AppBar(
           title: Text('Loading'),
         ),
-        body: loadingWidget(),
+        body: LoadingWidget(),
         bottomNavigationBar: actions);
   }
 }
