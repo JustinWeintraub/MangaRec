@@ -13,9 +13,10 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-  final _formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
   bool loading = false;
   String username = '';
+  String email = '';
   String password = '';
   String error = "";
   @override
@@ -39,7 +40,7 @@ class _RegisterState extends State<Register> {
             body: Container(
                 padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
                 child: Form(
-                  key: _formKey,
+                  key: formKey,
                   child: Column(
                     children: <Widget>[
                       SizedBox(height: 20.0),
@@ -50,6 +51,15 @@ class _RegisterState extends State<Register> {
                               val.isEmpty ? 'Enter an username' : null,
                           onChanged: (val) {
                             setState(() => username = val);
+                          }),
+                      SizedBox(height: 20.0),
+                      TextFormField(
+                          decoration:
+                              textInputDecoration.copyWith(hintText: 'Email'),
+                          validator: (val) =>
+                              val.isEmpty ? 'Enter an email' : null,
+                          onChanged: (val) {
+                            setState(() => email = val);
                           }),
                       SizedBox(height: 20.0),
                       TextFormField(
@@ -78,10 +88,10 @@ class _RegisterState extends State<Register> {
                           child: Text('Register',
                               style: TextStyle(color: Colors.white)),
                           onPressed: () async {
-                            if (_formKey.currentState.validate()) {
+                            if (formKey.currentState.validate()) {
                               setState(() => loading = true);
-                              dynamic result =
-                                  await Userware().register(username, password);
+                              dynamic result = await Userware()
+                                  .register(username, email, password);
                               if (result['success'] == false)
                                 setState(() => {
                                       loading = false,
