@@ -71,7 +71,6 @@ class MangaLayoutState extends State<MangaLayout> {
     // manga can be favorited, meaning a user likes the manga
     dynamic res = await Userware()
         .favoriteManga(UserInheritedWidget.of(context).user['jwt'], manga);
-    print(res);
     updateStatus(res);
   }
 
