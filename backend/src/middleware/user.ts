@@ -6,6 +6,7 @@ import jwt from "jwt-then";
 import helpers from "./helpers.js";
 import { Application, Request, Response } from "express";
 import pkg from "sequelize";
+import { checkVerification, createVerification } from "../connect/twilio.js";
 const { Op } = pkg;
 
 export default function userWare(app: Application) {
@@ -17,11 +18,26 @@ export default function userWare(app: Application) {
   app.post(base + "register", (req: Request, res: Response) => {
     // TODO add way more to this
     User.create(req.body)
-      .then(() => {
-        return res.json(helpers.success());
+      .then(async (user) => {
+        setTimeout(function () {
+          //deletes itself if not verified in a day
+          User.findOne({ where: { id: user["id"] } }).then((sameUser) => {
+            if (!sameUser["verified"])
+              User.destroy({ where: { id: user["id"] } });
+          });
+        }, 1000 * 60 * 60 * 24 * 1);
+
+        if (await createVerification(user["email"]))
+          return res.json(helpers.success());
+        else {
+          User.destroy({ where: { id: user["id"] } });
+          return res.json(helpers.error("Validation creation failed."));
+        }
       })
 
       .catch(function (e) {
+        if (!e.helpers) return res.json(helpers.error(e.errors[0].message));
+        //e.helpers ?
         return res.json(helpers.error(e.helpers.errors[0].message));
       });
   });
@@ -33,6 +49,8 @@ export default function userWare(app: Application) {
         //TODO move this?
         if (!(await bcrypt.compareSync(password, user["password"])))
           return res.json(helpers.error("Incorrect password"));
+        if (!user["verified"])
+          return res.json(helpers.error("User not validated."));
         return res.json(
           helpers.success({
             jwt: await jwt.sign(
@@ -47,9 +65,42 @@ export default function userWare(app: Application) {
           })
         ); //TODO need to implement time limit
       })
-      .catch((e) => {
-        return res.json(helpers.error(e.message));
-      });
+      .catch((e) => res.json(helpers.error(e.message)));
+  });
+
+  app.post(base + "validate", (req: Request, res: Response) => {
+    //TODO combine login and validate
+    const { username, password, code } = req.body;
+    User.findOne({ where: { username: username } })
+      .then(async (user) => {
+        if (!user) return res.json(helpers.error("Incorrect username"));
+        //TODO move this?
+        if (!(await bcrypt.compareSync(password, user["password"])))
+          return res.json(helpers.error("Incorrect password"));
+        if (await checkVerification(user["email"], code)) {
+          User.update(
+            {
+              verified: true,
+            },
+            { where: { username: user["username"] } }
+          ).then(async () =>
+            res.json(
+              helpers.success({
+                jwt: await jwt.sign(
+                  {
+                    username: user["username"],
+                  },
+                  process.env.JWTKey,
+                  {
+                    expiresIn: "1d",
+                  }
+                ),
+              })
+            )
+          );
+        } else return res.json(helpers.error("Validation failed."));
+      })
+      .catch((e) => res.json(helpers.error(e.message)));
   });
 
   app.post(

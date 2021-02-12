@@ -6,6 +6,20 @@ const { DataTypes } = pkg;
 
 // TODO https://medium.com/@jgrisafe/custom-user-authentication-with-express-sequelize-and-bcrypt-667c4c0edef5
 
+// https://stackoverflow.com/questions/59937776/how-to-use-sequelize-create-with-nested-objects-and-relations
+let mangaRating = sequelize.define("mangaRating", {
+  title: {
+    type: DataTypes.STRING,
+    unique: true,
+  },
+  type: {
+    type: DataTypes.INTEGER,
+    validate: {
+      min: 1,
+      max: 5,
+    },
+  },
+});
 let User = sequelize.define(
   "user",
   {
@@ -57,6 +71,9 @@ let User = sequelize.define(
     freezeTableName: true,
   }
 );
+
+User.hasMany(mangaRating);
+mangaRating.belongsTo(User);
 
 //TODO jest
 User.prototype.generateHash = function (password) {
